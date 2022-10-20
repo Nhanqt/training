@@ -1,0 +1,29 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: 123456
+    url: jdbc:postgresql://localhost/training
+  jpa:
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    database: postgresql
+  sql:
+    init:
+      platform: postgres
+      mode: always
+      continue-on-error: true
+
+  server:
+    error:
+      include-message: always
+
+logging:
+  level:
+    root: info
+  file:
+    path: logs
+    max-size: 2KB
+    max-history: 2
